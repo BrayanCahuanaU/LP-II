@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 
@@ -10,10 +11,14 @@ struct producto{
 
 void ingresar();
 void imprimir();
+void compra();
 
 int main(){
     ingresar();
     imprimir();
+    compra();
+    imprimir();
+    
     return 0;
 };
 
@@ -30,4 +35,23 @@ void imprimir(){
     cout<<"NOMBRE: " << x.nombre <<endl;
     cout<<"CODIGO: " << x.codigo <<endl;
     cout<<"CANTIDAD: "<< x.cantidad <<endl;
+};
+
+void compra(){
+    int consultaCodigo;
+    int consultaCantidad;
+    cout<<"Ingrese el codigo del producto q deseas comprar: ";
+    cin>>consultaCodigo;
+    if (consultaCodigo=x.codigo){
+        cout<<"Ingrese la cantidad del producto que desea comprar: ";
+        cin>>consultaCantidad;
+        if(consultaCantidad = x.cantidad){
+            x.cantidad=x.cantidad-consultaCantidad;
+            cout<<"Su compra fue realizada..."<<endl;
+            cout<<"Estado Actual del inventario:"<<endl;
+        }
+        else{
+            cout<<"No se encuentra stock suficiente para tu compra";
+        }
+    };
 };
