@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+
+struct producto{
+    char nombre[15];
+    int codigo;
+    int cantidad;
+}x;
+
+void ingresar();
+void imprimir();
+
+int main(){
+    ingresar();
+    imprimir();
+    return 0;
+};
+
+void ingresar(){
+    cout<<"Ingrese el nombre del producto: ";
+    cin>>x.nombre;
+    cout<<"Ingrese el codigo del producto: ";
+    cin>>x.codigo;
+    cout<<"Ingrese la cantidad del producto: ";
+    cin>>x.cantidad;
+};
+
+void imprimir(){
+    cout<<"NOMBRE: " << x.nombre <<endl;
+    cout<<"CODIGO: " << x.codigo <<endl;
+    cout<<"CANTIDAD: "<< x.cantidad <<endl;
+};
